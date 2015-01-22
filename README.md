@@ -47,7 +47,7 @@ Using the draw line API to create a cool randomized piece of art.
 Some concepts you'll learn are:
 
 
-* The CreateJS using our draw utility.
+* Drawing with CreateJS and our draw utility.
 * RGB color.
 * Using constants to represent state and to avoid magic values and typos in code.
 * Leveraging the power of built-in and 3rd party API (DRY), like Math and opspark-draw.
