@@ -7,20 +7,23 @@ This little motion poem is a play on Ari Bader-Natal line sketch, using the draw
 
 Create a new Cloud9 workspace and clone the project from github.com:
 
-1. From your Cloud9 Dashboard, find in the upper left corner and click the green button, "Create New Workspace":
-Select "Clone From URL":
+1. From your Cloud9 Dashboard, find in the upper left corner and click the green button, "Create New Workspace" > "Clone From URL":
 
     <img src="https://raw.githubusercontent.com/OperationSpark/using-c9/master/img/clone-new-workspace.png">
 
-2. In the "Source URL" form input, copy and paste in the following URL (see A).  Then, in the environment selection box, select "HTML5" (see B).  Finally, click the green button "Create" (see C).
-
+2. In the "Source URL" form input, copy and paste in the following URL (see A):
+    
+        https://github.com/OperationSpark/line-crawler.git
+    
+    Then, in the environment selection box, select "HTML5" (see B).  Finally, click the green button "Create" (see C).
+    
     <img src="https://raw.githubusercontent.com/OperationSpark/line-crawler/master/img/clone-workspace.png">
 
-5. Wait for the workspace to finish spooling (while spooling up, you'll see a spinning gear on the newly created workspace in the sidebar), and once the workspace is completed, click the green button, "START EDITING".
+3. Wait for the workspace to finish spooling (while spooling up, you'll see a spinning gear on the newly created workspace in the sidebar), and once the workspace is completed, click the green button, "START EDITING".
 
     <img src="https://raw.githubusercontent.com/OperationSpark/line-crawler/master/img/start-editing.png">
 
-7. Now, when the workspace is loaded, select the command-line in the bottom window pane, and enter the command `bower install`, then press `Enter`, like this:
+4. Now, when the workspace is loaded, select the command-line in the bottom window pane, and enter the command `bower install`, then press `Enter`, like this:
 
     <img src="https://raw.githubusercontent.com/OperationSpark/using-c9/master/img/motion-poem-install-bower.png">
 
