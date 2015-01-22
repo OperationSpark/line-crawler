@@ -271,6 +271,6 @@ Awesome, let's get to it!
 
 ## Just Code TODOs in Google Presentation
 
-<a href="" target="_blank">Code Presentation</a>
+<a href="https://docs.google.com/presentation/d/18G2v8GAb3j0-bbrtyLueIC18mHziKxlqPPz01X5uBr0/edit?usp=sharing" target="_blank">Code Presentation</a>
 
 &copy; Operation Spark 2015
