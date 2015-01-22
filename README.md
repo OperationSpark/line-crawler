@@ -12,27 +12,13 @@ Select "Clone From URL":
 
     <img src="https://raw.githubusercontent.com/OperationSpark/using-c9/master/img/clone-new-workspace.png">
 
-2. In the "Source URL" form input, copy and paste in the following URL:
+2. In the "Source URL" form input, copy and paste in the following URL (see A).  Then, in the environment selection box, select "HTML5" (see B).  Finally, click the green button "Create" (see C).
 
-        https://github.com/OperationSpark/line-crawler.git
+    <img src="https://raw.githubusercontent.com/OperationSpark/line-crawler/master/img/clone-workspace.png">
 
-    <img src="https://raw.githubusercontent.com/OperationSpark/using-c9/master/img/paste-clone-url.png">
+5. Wait for the workspace to finish spooling (while spooling up, you'll see a spinning gear on the newly created workspace in the sidebar), and once the workspace is completed, click the green button, "START EDITING".
 
-3. In the environment selection box, select "HTML5":
-
-    <img src="https://raw.githubusercontent.com/OperationSpark/using-c9/master/img/select-node-env.png">
-
-4. Click the green button "Create".
-
-    <img src="https://raw.githubusercontent.com/OperationSpark/using-c9/master/img/click-create.png">
-
-5. Wait for the workspace to finish spooling (while spooling up, you'll see a spinning gear on the newly created workspace in the sidebar):
-
-    <img src="https://raw.githubusercontent.com/OperationSpark/using-c9/master/img/workspace-spooling.png">
-
-6. Once the workspace is completed, click the green button, "START EDITING".
-
-    <img src="https://raw.githubusercontent.com/OperationSpark/using-c9/master/img/start-editing.png">
+    <img src="https://raw.githubusercontent.com/OperationSpark/line-crawler/master/img/start-editing.png">
 
 7. Now, when the workspace is loaded, select the command-line in the bottom window pane, and enter the command `bower install`, then press `Enter`, like this:
 
