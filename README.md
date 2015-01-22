@@ -55,6 +55,7 @@ Some concepts you'll learn are:
 * Function declaration and invocation, passing arguments to functions.
 * Conditional statements - making decisions in code.
 * Random number generation within a 0-based range.
+* Pair programming.
 
 ### Entering Code
 
@@ -202,7 +203,23 @@ Alrighty, to run the app, YOU MUST open the file at:
 
     index.http
 
-And with the `index.html` tab selected in the editor, you can simply press the green play button, and leave it running in the tab that opens.  As you save your changes future work, your changes to your code will be reflected in the app.
+And with the `index.html` tab selected in the editor (see A), you can simply press the green play button (see B).
+
+This will start an Apache webserver in a new tab of the Console View, the bottom window pane of the Cloud9 IDE.  Once Apache has booted, you can click the URL `https://line-crawler-jfraboni.c9.io/index.html` (see C) - this will open a new tab with the appliation running.
+
+<img src="https://raw.githubusercontent.com/OperationSpark/line-crawler/master/img/run-app.png">
+
+You can _split_ your tabs to keep the app running side by side your code while you continue to work.  First, _right-click_ the tab with the running app (see A), then select `Split Pane in Two Columns` (see B): 
+
+<img src="https://raw.githubusercontent.com/OperationSpark/line-crawler/master/img/split-tabs.png">
+
+This will give you this setup:
+
+
+
+As you save your future work, your changes to your code will be reflected in the app.
+
+
 
 #### Incrementing Our Drawing Position
 
