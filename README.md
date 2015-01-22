@@ -52,7 +52,7 @@ Some concepts you'll learn are:
 * Using constants to represent state and to avoid magic values and typos in code.
 * Leveraging the power of built-in and 3rd party API (DRY), like Math and opspark-draw.
 * Variable declaration and initialization.
-* Function declaration and invocation, passing arguments to functions.
+* Function invocation and passing arguments to functions.
 * Conditional statements - making decisions in code.
 * Random number generation within a 0-based range.
 * Pair programming.
