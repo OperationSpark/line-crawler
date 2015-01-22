@@ -95,7 +95,7 @@ We won't be loading any external data in this app, and we've already loaded the 
 
 And, you can see that we've also instantiated our view object onto which we can add children display objects - we'll do this in all our motion poem projects.
 
-But have, we've added for you some constants:
+We have also added for you some constants:
 
 ````javascript
 const ACROSS = 'across';
