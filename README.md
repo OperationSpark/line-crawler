@@ -103,7 +103,7 @@ const BACK = 'back';
 const UP = 'up';
 ````
 
-These will represent the state of our little app, and help us make decisions as to _how_ to draw our lines.  Often, constants are used to express those type of things that will never change and to hold values used repetitiously that we don't want developers to have to manually type, like strings, that are easy to misspell.
+These will represent the state of our little app, and help us make decisions as to _how_ to draw our lines.  Often, constants are used to express those type of things that will never change and to hold values used repetitively that we don't want developers to have to manually type, like strings, that are easy to misspell.
 
 ###TODO 1 : Declare Our Variables
 
@@ -120,7 +120,7 @@ Alrighty, let's find **TODO 1** and declare our variables:
 var i, shape, direction;
 ````
 
-Perfect!  Now, before we can use our variables, we need to initialize them to a value. Find **TOOD 2** and initialize our app's variables:
+Perfect!  Now, before we can use our variables, we need to initialize them to a value. Find **TODO 2** and initialize our app's variables:
 
 ###TODO 2 : Initialize Our Variables
 
@@ -142,7 +142,7 @@ Our canvas is a rectangular shape, and the points or positions within the canvas
 
 We are going to draw lines from and to the outer edges of our canvas, and because we want to start drawing from the top left side of our canvas, we'll first set `i` to `0`.
 
-Our `direction` will first be set to `ACROSS` because we'll be drawing _across_ the top of the canvas.  For the mere sake of clarity, it is ofen better to use values contextual to our intent - we want the app to be drawing and drawing _across_.  This makes it clear to us and other develpers what _should_ be happening in this particular state of the app.
+Our `direction` will first be set to `ACROSS` because we'll be drawing _across_ the top of the canvas.  For the mere sake of clarity, it is often better to use values contextual to our intent - we want the app to be drawing and drawing _across_.  This makes it clear to us and other developers what _should_ be happening in this particular state of the app.
 
 And finally, we'll assign the variable `shape` to a new CreateJS Shape, using its built in _constructor_ function.  We use and recommend a <a href"http://en.wikipedia.org/wiki/Factory_(object-oriented_programming)" target="_blank">factory</a> for initialization of objects in JavaScript, but JavaScript also supports constructor functions, special functions that developers define to initialize an object of a particular type.
 
@@ -185,17 +185,17 @@ First thing we do is draw a line.  You'll see in the comment a note on the API f
 
     // NOTE: draw.line(fromX, fromY, toX, toY, color, thickness, shape);
 
-We've put this here as a courtesy to show you what paramters are expected of the `draw.line()` API.  Clearly, we want to draw line from a point (an x/y coordinate on our canvas) to a point (another x/y coordinate on our canvas), and this is what the first 4 expected paramters of the `draw.line()` function.
+We've put this here as a courtesy to show you what parameters are expected of the `draw.line()` API.  Clearly, we want to draw line from a point (an x/y coordinate on our canvas) to a point (another x/y coordinate on our canvas), and this is what the first 4 expected parameters of the `draw.line()` function.
 
 Interestingly, we commence drawing _from_ an x/y value of `0, 0` and draw to a randomly selected `x` value within the range of the width of our canvas - accomplished with the expression `Math.random() * canvas.width` - and a 'y' value of the `canvas.height`.
 
-The next paramter is color, and we're using the `draw.randomColor()` API of our `draw` utility to randomly create a color within certain ranges of mixtures of red blue and green.  RGBA represents color mixed of red, blue, green in values within the range of 0 to 255, and alpha for transparency.  <a href="http://en.wikipedia.org/wiki/RGBA_color_space#ARGB" target="_blank">RGBA</a> is a 16-base <a href="http://en.wikipedia.org/wiki/Hexadecimal" target="_blank">hexidecimal value</a>, where primary colors are arranged in discrete channels, stored in memory using a single 32-bit unsigned integer.
+The next parameter is color, and we're using the `draw.randomColor()` API of our `draw` utility to randomly create a color within certain ranges of mixtures of red blue and green.  RGBA represents color mixed of red, blue, green in values within the range of 0 to 255, and alpha for transparency.  <a href="http://en.wikipedia.org/wiki/RGBA_color_space#ARGB" target="_blank">RGBA</a> is a 16-base <a href="http://en.wikipedia.org/wiki/Hexadecimal" target="_blank">hexidecimal value</a>, where primary colors are arranged in discrete channels, stored in memory using a single 32-bit unsigned integer.
 
 Each of the 256 values represents a different color of blue, or green, etc.  And by combining these values, we can get up to 16,777,216 possible colors!
 
 If you want to play with the values to see how they are represented, <a href="http://www.hexcolortool.com/" target="_blank">check out this page...</a>
 
-To finish up with the `draw.line()` API, the last two executed paramters are the line thickness and a Shape onto which we want to draw the line.  If we didn't provide a Shape as this last argument, the `draw.line()` method would conveniently return a _new_ Shape with the line drawn on it.
+To finish up with the `draw.line()` API, the last two included arguments are the line thickness and a Shape onto which we want to draw the line.  If we didn't provide a Shape as this last argument, the `draw.line()` method would conveniently return a _new_ Shape with the line drawn on it.
 
 #### Incrementing Our Drawing Position
 
@@ -217,7 +217,7 @@ Alrighty, to run the app, YOU MUST open the file at:
 
 And with the `index.html` tab selected in the editor (see A), you can simply press the green play button (see B).
 
-This will start an Apache webserver in a new tab of the Console View, the bottom window pane of the Cloud9 IDE.  Once Apache has booted, you can click the URL `https://line-crawler-jfraboni.c9.io/index.html` (see C) - this will open a new tab with the appliation running.
+This will start an Apache web server in a new tab of the Console View, the bottom window pane of the Cloud9 IDE.  Once Apache has booted, you can click the URL `https://line-crawler-jfraboni.c9.io/index.html` (see C) - this will open a new tab with the appliation running.
 
 <img src="https://raw.githubusercontent.com/OperationSpark/line-crawler/master/img/run-app.png">
 
@@ -245,7 +245,13 @@ Knowing our what the draw.line() API takes as arguments _and_ the conditional ch
 
 We'll give you a hint:  You want to start with adding on a `else if` condition to our outer `if` statement that checks if `direction === DOWN`.  Oh, and you'll need to create a condition for BACK and UP also, each cycling to the state of direction!
 
-And _one_ last thing, in your final conditional statement to reset
+And _one_ last thing, in your final conditional statement to reset the graphics on the `shape` variable so we can start over and keep performance within reason.  To do that, you'd add:
+
+````javascript
+shape.graphics.clear();
+````
+
+Awesome, let's get to it!
 
 ***
 
