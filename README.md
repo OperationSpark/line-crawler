@@ -158,6 +158,10 @@ Finally, _with_ our new _instance_ of our Shape, we then add that shape as a chi
 
 ###TODO 3 : Create a Condition for Drawing ACROSS
 
+The rest of the code we write in this app will take place in our `update()` function.
+
+The `update()` method is called 60 times per second by the CreateJS framework, and allows us to simulate motion, otherwise known as animation, and do other logical checks on each cycle.  This is essentially how all games work - on some type of game loop allowing us to update game elements and perform other calculations, like hit testing, etc.
+
 Find **TODO 3** and create a condition statement that checks if our direction is `ACROSS`, so that when true, we can fire our code that draws across the top of the canvas from left to right:
 
 ````javascript
