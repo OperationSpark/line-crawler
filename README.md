@@ -197,6 +197,18 @@ If you want to play with the values to see how they are represented, <a href="ht
 
 To finish up with the `draw.line()` API, the last two executed paramters are the line thickness and a Shape onto which we want to draw the line.  If we didn't provide a Shape as this last argument, the `draw.line()` method would conveniently return a _new_ Shape with the line drawn on it.
 
+#### Incrementing Our Drawing Position
+
+To draw along from left to right along the top along the top of our canvas, we're merely going to increment the value of `i` from `0` to the value of `canvas.width` and assign this to our `fromX` value expected of the `draw.line()` method.  The `fromY` value we can leave at `0` for the duration of drawing `ACROSS`.
+
+We already know that `i` starts at `0`, so we can first just go a head and draw our line staring at `0, 0`, which we've done.
+
+Next, to know when we should _stop_ drawing `ACROSS`, we check `if (i < canvas.width)`, and if `i` is _still_ less than the width of our canvas, we merely increment `i` with the statement `i++;`, and then we exit our conditional statement.  On the next tick of our game loop, we begin drawing our line one pixel to the right, then do our check again until `if (i < canvas.width)` returns `false`!
+
+#### Changing State
+
+Once our check against the canvas width returns false, we enter the `else` part of our conditional statement, and here set our `direction` to the value `DOWN` and we reset the value of `i` to help us set up our next drawing state, `DOWN`.  On the next loop, the check to see `if (direction === ACROSS)` returns false, so we've changed state, and we will no longer continue to draw lines from across the top of our canvas!
+
 ### Run the App!
 
 Alrighty, to run the app, YOU MUST open the file at:
@@ -215,23 +227,11 @@ You can _split_ your tabs to keep the app running side by side your code while y
 
 This will give you this setup:
 
+<img src="https://raw.githubusercontent.com/OperationSpark/line-crawler/master/img/side-by-side.png">
 
+As you save your future work, your changes to your code will be reflected in the app, BUT you will have to press the refresh button on the tab that with the app running in it, like so:
 
-As you save your future work, your changes to your code will be reflected in the app.
-
-
-
-#### Incrementing Our Drawing Position
-
-To draw along from left to right along the top along the top of our canvas, we're merely going to increment the value of `i` from `0` to the value of `canvas.width` and assign this to our `fromX` value expected of the `draw.line()` method.  The `fromY` value we can leave at `0` for the duration of drawing `ACROSS`.
-
-We already know that `i` starts at `0`, so we can first just go a head and draw our line staring at `0, 0`, which we've done.
-
-Next, to know when we should _stop_ drawing `ACROSS`, we check `if (i < canvas.width)`, and if `i` is _still_ less than the width of our canvas, we merely increment `i` with the statement `i++;`, and then we exit our conditional statement.  On the next tick of our game loop, we begin drawing our line one pixel to the right, then do our check again until `if (i < canvas.width)` returns `false`!
-
-#### Changing State
-
-Once our check against the canvas width returns false, we enter the `else` part of our conditional statement, and here set our `direction` to the value `DOWN` and we reset the value of `i` to help us set up our next drawing state, `DOWN`.  On the next loop, the check to see `if (direction === ACROSS)` returns false, so we've changed state, and we will no longer continue to draw lines from across the top of our canvas!
+<img src="https://raw.githubusercontent.com/OperationSpark/line-crawler/master/img/refresh-html.png">
 
 ## Your Turn
 
