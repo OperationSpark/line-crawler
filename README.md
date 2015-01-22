@@ -251,6 +251,8 @@ And _one_ last thing, in your final conditional statement to reset the graphics 
 shape.graphics.clear();
 ````
 
+Pair off and code with your buddy.  Two eyes on a problem and checking code as you go is a powerful way to create good code and problem solve much more quickly.
+
 Awesome, let's get to it!
 
 ***
