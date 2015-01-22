@@ -18,7 +18,7 @@ Select "Clone From URL":
 
     <img src="https://raw.githubusercontent.com/OperationSpark/using-c9/master/img/paste-clone-url.png">
 
-3. In the environment selection box, select "Node":
+3. In the environment selection box, select "HTML5":
 
     <img src="https://raw.githubusercontent.com/OperationSpark/using-c9/master/img/select-node-env.png">
 
@@ -140,103 +140,17 @@ update: function () {
     // other code ...
 ````
 
+Ok, it's your turn!
+
+Now we want to draw from the top right corner to the bottom right corner of our canvas - and you've got to figure out how to do it.
+
+You've now implemented the pattern to draw from the top left to the top right of the canvas, so you should be able to figure out the code to draw DOWN.  Knowing our what the draw.line() API takes as arguments _and_ the conditional check that told us when to _stop_ drawing ACROSS and switch to drawing DOWN, let's figure out a conditional statement to draw DOWN.  
+
 ***
 
 ## Just Code TODOs
 
-###TODO 1 : Declare Our Variables
 
-We going to need a few variables: The variable `i`, a counter or _index_ which we'll increment to tell us _where_ to start drawing.  A `shape`, which we'll assign to a CreateJS Shape and onto which we'll draw our lines.  And finally, a variable to represent which direction we'll increment our drawing position, represented by our constants, ACROSS, DOWN, BACK, UP.
-
-````javascript
-// TODO 1 : Declare our variables //
-var i, shape, direction;
-````
-###TODO 2 : Initialize Our Variables
-
-````javascript
-init: function() {
-    // TODO 2 : Initialize our variables //
-    i = 0;
-    direction = ACROSS;
-    shape = new createjs.Shape();
-    view.addChild(shape);
-},
-````
-
-###TODO 3 : Create a Condition for Drawing ACROSS
-
-````javascript
-update: function () {
-    // NOTE: draw.line(fromX, fromY, toX, toY, color, thickness, shape);
-    
-    // TODO 3 : Create the condition for ACROSS //
-    if (direction === ACROSS) {
-        draw.line(i, 0, Math.random() * canvas.width, canvas.height, draw.randomColor(25, 200, 255, .4), 7, shape);
-        if (i < canvas.width) {
-            i++;
-        } else {
-            direction = DOWN;
-            i = 0;
-        }            
-    }
-    
-    // other code ...
-````
-
-###TODO 4 : Create a Condition for Drawing DOWN
-
-````javascript
-// other code...
-
-// TODO 4 : Create a condition for DOWN //
-else if (direction === DOWN) {
-    draw.line(canvas.width, i, 0, Math.random() * canvas.height, draw.randomColor(50, 255, 255, .3), 7, shape);
-    if (i < canvas.height) {
-        i++;
-    } else {
-        direction = BACK;
-        i = canvas.width;
-    }
-}
-
-// other code...
-````
-
-###TODO 5 : Create a Condition for Drawing BACK
-
-````javascript
-// other code...
-
-// TODO 5 : Create a condition for BACK //
-else if (direction === BACK) {
-    draw.line(i, canvas.height, Math.random() * canvas.width, 0, draw.randomColor(50, 200, 255, .2), 7, shape);
-    if (i > 0) {
-        i--;
-    } else {
-        direction = UP;
-        i = canvas.height;
-    }
-}
-
-// other code...
-````
-
-###TODO 6 : Create a Condition for Drawing UP
-
-````javascript
-// TODO 6 : Create a condition for UP //
-else {
-    draw.line(0, i, canvas.width, Math.random() * canvas.height, draw.randomColor(50, 255, 200, .4), 7, shape);
-    if (i > 0) {
-        i--;
-    } else {
-        direction = ACROSS;
-        i = 0;
-        shape.graphics.clear();
-    }
-}
-````
 
 ## Just Code TODOs in Google Presentation
 
