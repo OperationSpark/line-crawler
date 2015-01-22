@@ -1,47 +1,10 @@
-The Line Crawler
-===
-
-## Just Code TODOs
-
-###TODO 1 : Declare Our Variables
-
-````javascript
-// TODO 1 : Declare our variables //
-var i, shape, direction;
-````
-###TODO 2 : Initialize Our Variables
-
-````javascript
-init: function() {
-    // TODO 2 : Initialize our variables //
-    i = 0;
-    direction = ACROSS;
-    shape = new createjs.Shape();
-    view.addChild(shape);
-},
-````
-
-###TODO 3 : Create a Condition for Drawing ACROSS
-
-````javascript
-update: function () {
-    // NOTE: draw.line(fromX, fromY, toX, toY, color, thickness, shape);
-    
-    // TODO 3 : Create the condition for ACROSS //
-    if (direction === ACROSS) {
-        draw.line(i, 0, Math.random() * canvas.width, canvas.height, draw.randomColor(25, 200, 255, .4), 7, shape);
-        if (i < canvas.width) {
-            i++;
-        } else {
-            direction = DOWN;
-            i = 0;
-        }            
-    }
-    
-    // other code ...
-````
-
 ###TODO 4 : Create a Condition for Drawing DOWN
+
+The following `if else` statement assumes that our index `i` has been reset to `0`.  We then change what values are incremented and randomized when calling the `draw.line()` API, so that while incrementing `i`, we're increasing the `fromY` value.  And our `toX` is set now to `0`, with our `toY` value randomized within the height of our canvas.
+
+Because we travel _down_ the screen or canvas with incremented values on the y axis, we can continue to increment `i` `if (i < canvas.height)`.
+
+Once the conditional statement `if (i < canvas.height)` returns false, we prepare for the next drawing phase by setting the `direction` to `BACK`, and next set `i` to the value of `canvas.width`, allowing us to commence drawing at the right-most side of the canvas, moving back along the width of the canvas.
 
 ````javascript
 // other code...
