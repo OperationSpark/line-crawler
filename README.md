@@ -87,12 +87,13 @@ All of our coding, like all our little motion poems, will happen in the `motion-
 
 Starting up an application often takes a few steps of:
 
-Importing some libraries of code.
-Loading some external data.
-Initializing some variables for use in our app.
+* Importing some libraries of code.
+* Loading some external data.
+* Initializing some variables for use in our app.
 
+We won't be loading any external data in this app, and we've already loaded the libraries we're going to use, both the CreateJS module, EaselJS and our drawing utility, draw, so that part is done.
 
-We've already loaded the libraries we're going to use, both the CreateJS module, EaselJS and our drawing utility, draw, so that part is done.  And, you can see that we've also instantiated our view object onto which we can add children display objects - we'll do this in all our motion poem projects.
+And, you can see that we've also instantiated our view object onto which we can add children display objects - we'll do this in all our motion poem projects.
 
 But have, we've added for you some constants:
 
