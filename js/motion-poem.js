@@ -23,12 +23,16 @@
 
             update: function () {
                 // NOTE: draw.line(fromX, fromY, toX, toY, color, thickness, shape);
-
+                
+                ////////////////////////////////////////////////////////////////
+                // START OF CONDITIONAL STATEMENTS                            //
+                ////////////////////////////////////////////////////////////////
+                
                 // TODO 3 : Create the condition for ACROSS //
-                 
+                
 
                 // TODO 4 : Create a condition for DOWN //
-                
+                 
                 
                 // TODO 5 : Create a condition for BACK //
                 
@@ -36,10 +40,11 @@
                 // TODO 6 : Create a condition for UP //
                 
                 
-                ///////////////////////////////////////
-                
+                ////////////////////////////////////////////////////////////////
+                // END OF CONDITIONAL STATEMENTS                              //
+                ////////////////////////////////////////////////////////////////
             }
-        }
+        };
         return _motionPoem;
-    }
+    };
 }(window));

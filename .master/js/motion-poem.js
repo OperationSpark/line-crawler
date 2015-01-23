@@ -26,7 +26,11 @@
 
             update: function () {
                 // NOTE: draw.line(fromX, fromY, toX, toY, color, thickness, shape);
-
+                
+                ////////////////////////////////////////////////////////////////
+                // START OF CONDITIONAL STATEMENTS                            //
+                ////////////////////////////////////////////////////////////////
+                
                 // TODO 3 : Create the condition for ACROSS //
                 if (direction === ACROSS) {
                     draw.line(i, 0, Math.random() * canvas.width, canvas.height, draw.randomColor(25, 200, 255, .4), 7, shape);
@@ -35,7 +39,7 @@
                     } else {
                         direction = DOWN;
                         i = 0;
-                    }            
+                    }
                 } 
 
                 // TODO 4 : Create a condition for DOWN //
@@ -71,8 +75,11 @@
                         shape.graphics.clear();
                     }
                 }
+                ////////////////////////////////////////////////////////////////
+                // END OF CONDITIONAL STATEMENTS                              //
+                ////////////////////////////////////////////////////////////////
             }
-        }
+        };
         return _motionPoem;
-    }
+    };
 }(window));

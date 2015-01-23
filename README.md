@@ -237,9 +237,11 @@ This will give you this setup:
 
 <img src="https://raw.githubusercontent.com/OperationSpark/line-crawler/master/img/side-by-side.png">
 
-As you save your future work, your changes to your code will be reflected in the app, BUT you will have to press the refresh button on the tab that with the app running in it, like so:
+As you save your future work, changes to your code will be reflected in the app > you don't have to press "Run" again - as long as the Apache web server is still running - you need only press the refresh button on the tab with the app running in it, like so:
 
 <img src="https://raw.githubusercontent.com/OperationSpark/line-crawler/master/img/refresh-html.png">
+
+***
 
 ## Your Turn
 
@@ -249,11 +251,55 @@ Now we want to draw from the top right corner to the bottom right corner of our 
 
 You've now implemented the pattern to draw from the top left across to the top right of the canvas, so you should be able to figure out the code to draw DOWN.
 
-Knowing our what the draw.line() API takes as arguments _and_ the conditional check that told us when to _stop_ drawing ACROSS and switch to drawing DOWN, let's figure out a conditional statement to draw DOWN.  
+Knowing what the draw.line() API takes as arguments _and_ the conditional check that told us when to _stop_ drawing ACROSS and switch to drawing DOWN, let's figure out a conditional statement to draw DOWN.  
 
-We'll give you a hint:  You want to start with adding on a `else if` condition to our outer `if` statement that checks if `direction === DOWN`.  Oh, and you'll need to create a condition for BACK and UP also, each cycling to the state of direction!
+We'll give you some hints:
 
-And _one_ last thing, in your final conditional statement to reset the graphics on the `shape` variable so we can start over and keep performance within reason.  To do that, you'd add:
+* Think first about where you want to start drawing _from_ and where you want to draw _to_.  Remember that a point on the canvas has 2 values, an x and y.  So the _drawing-from_ point will have an x and y value, and the _drawing-to_ point will also have an x and y value.
+* Draw out what it is you want to accomplish.  This will help you figure out which _drawing-from_ values need to be incremented or decremented, and which _drawing-to_ values need to be randomized within either the range of the canvas width or canvas height.
+* You will want to start by adding on a `else if` condition that checks if `direction === DOWN`.  In fact, will help you one step further > you can template your conditional statements for each drawing state you need to handle, like so:
+
+````javascript
+// other code...
+
+////////////////////////////////////////////////////////////////
+// START OF CONDITIONAL STATEMENTS                            //
+////////////////////////////////////////////////////////////////
+
+// TODO 3 : Create the condition for ACROSS //
+if (direction === ACROSS) {
+    draw.line(i, 0, Math.random() * canvas.width, canvas.height, draw.randomColor(25, 200, 255, .4), 7, shape);
+    if (i < canvas.width) {
+        i++;
+    } else {
+        direction = DOWN;
+        i = 0;
+    }
+}
+
+// TODO 4 : Create a condition for DOWN //
+else if (direction === DOWN) {
+    // your code here //
+} 
+
+// TODO 5 : Create a condition for BACK //
+else if (direction === BACK) {
+    // your code here //
+}
+ 
+// TODO 6 : Create a condition for UP //
+else {
+    // your code here //
+}
+
+////////////////////////////////////////////////////////////////
+// END OF CONDITIONAL STATEMENTS                              //
+////////////////////////////////////////////////////////////////
+
+// other code...
+````
+
+And _one_ last thing, in your final `else` conditional statement, reset the graphics on the `shape` variable so we can start over and keep performance within reason.  To do that, after you've reset the value of `i`, add:
 
 ````javascript
 shape.graphics.clear();
