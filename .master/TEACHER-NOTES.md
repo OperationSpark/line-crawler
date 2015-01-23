@@ -1,3 +1,9 @@
+**Table of Contents**
+
+- [TODO 4 : Create a Condition for Drawing DOWN](#todo-4--create-a-condition-for-drawing-down)
+- [TODO 5 : Create a Condition for Drawing BACK](#todo-5--create-a-condition-for-drawing-back)
+- [TODO 6 : Create a Condition for Drawing UP](#todo-6--create-a-condition-for-drawing-up)
+
 ###TODO 4 : Create a Condition for Drawing DOWN
 
 First, notice that we change our `fromX` argument, the first argument passed to the `draw.line()` method, to `canvas.width`.  This is because we now want to draw from right to left across the canvas, while moving our drawing position DOWN.

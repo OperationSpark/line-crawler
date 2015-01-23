@@ -3,6 +3,29 @@ The Line Crawler
 
 This little motion poem is a play on Ari Bader-Natal line sketch, using the draw line API to create a cool randomized piece of art.
 
+**Table of Contents**
+
+- [The Line Crawler](#the-line-crawler)
+  - [Installation](#installation)
+  - [Overview](#overview)
+    - [Specs](#specs)
+    - [Take Away](#take-away)
+    - [Entering Code](#entering-code)
+    - [Type of App : Web](#type-of-app--web)
+  - [Lesson Steps](#lesson-steps)
+    - [Initializing Our App](#initializing-our-app)
+    - [TODO 1 : Declare Our Variables](#todo-1--declare-our-variables)
+    - [TODO 2 : Initialize Our Variables](#todo-2--initialize-our-variables)
+    - [Cartesian Coordinates](#cartesian-coordinates)
+    - [TODO 3 : Create a Condition for Drawing ACROSS](#todo-3--create-a-condition-for-drawing-across)
+      - [Drawing Lines](#drawing-lines)
+      - [Incrementing Our Drawing Position](#incrementing-our-drawing-position)
+      - [Changing State](#changing-state)
+    - [Run the App!](#run-the-app)
+  - [Your Turn](#your-turn)
+  - [Just Code TODOs](#just-code-todos)
+  - [Just Code TODOs in Google Presentation](#just-code-todos-in-google-presentation)
+
 ## Installation
 
 Create a new Cloud9 workspace and clone the project from github.com:
