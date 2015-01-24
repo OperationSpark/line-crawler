@@ -165,7 +165,9 @@ init: function() {
 
 `i` will used to help us find the start of our drawing position on our canvas.
 
-Our canvas is a rectangular shape, and the points or positions within the canvas are registered using cartesian coordinates along both an x and y axis.  The value of x is incremented going left to right, and the value of y is incremented going top to bottom - a throwback to the manner in which tube TV's refreshed pictures.  So the top left point on the canvas has an x and y value of `0, 0`.
+Our canvas is a rectangular shape, and the points or positions within the canvas are registered using cartesian coordinates along both an x and y axis.  The value of x is incremented going left to right, and the value of y is incremented going top to bottom - a throwback to the manner in which tube TV's refreshed pictures.  So the top left point on the canvas has an x and y value of `0, 0`.  Here's a visual representation:
+
+<img src="https://raw.githubusercontent.com/OperationSpark/line-crawler/master/img/coords.png">
 
 We are going to draw lines from and to the outer edges of our canvas, and because we want to start drawing from the top left side of our canvas, we'll first set `i` to `0`.
 
