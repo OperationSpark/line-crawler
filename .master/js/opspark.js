@@ -11,7 +11,7 @@
                 motionPoem.update();
                 stage.update();
             }
-        };
+        }
 
         canvas = document.getElementById('canvas');
         stage = new createjs.Stage(canvas);
@@ -24,5 +24,5 @@
         createjs.Ticker.on('tick', _app.onTick, _app);
         
         return _app;
-    };
+    }
 }(window));
