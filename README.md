@@ -246,7 +246,7 @@ Once our check against the canvas width returns false, we enter the `else` part 
 
 Alrighty, to run the app, YOU MUST open the file at:
 
-    index.http
+    index.html
 
 And with the `index.html` tab selected in the editor (see A), you can simply press the green play button (see B).
 
