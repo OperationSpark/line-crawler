@@ -44,7 +44,7 @@
                 
                 // TODO 3 : Create the condition for ACROSS //
                 if (direction === ACROSS) {
-                    drawLineAcross(i, 0, randomX(), height);
+                    drawLine(i, 0, randomX(), height);
                     if (i < width) {
                         i++;
                     } else {
@@ -57,10 +57,11 @@
                 else if (direction === DOWN) {
                     /*
                      * 4.a:
-                     * Which drawing method to draw down?
-                     * What are the values of fromX, fromY, toX, toY ?
+                     * Call drawLine()
+                     * To draw the line down the right side, what
+                     * are the values of fromX, fromY, toX, toY ?
                      */
-                    drawLineDown(width, i, 0, randomY());
+                    drawLine(width, i, 0, randomY());
                     
                     /*
                      * 4.b:
@@ -82,10 +83,11 @@
                 else if (direction === BACK) {
                     /*
                      * 5:a:
-                     * Which drawing method to draw back?
-                     * What are the values of fromX, fromY, toX, toY ?
+                     * Call drawLine()
+                     * To draw the line back across the bottom, what
+                     * are the values of fromX, fromY, toX, toY ?
                      */
-                    drawLineBack(i, height, randomX(), 0);
+                    drawLine(i, height, randomX(), 0);
                     
                     /*
                      * 5:b:
@@ -108,10 +110,11 @@
                 else {
                     /*
                      * 6.a:
-                     * Which drawing method to draw up?
-                     * What are the values of fromX, fromY, toX, toY ?
+                     * Call drawLine()
+                     * To draw the line up the left side, what
+                     * are the values of fromX, fromY, toX, toY ?
                      */
-                    drawLineUp(0, i, width, randomY());
+                    drawLine(0, i, width, randomY());
                     
                     /*
                      * 6.b:
@@ -141,16 +144,7 @@
                 ////////////////////////////////////////////////////////////////
             }
         };
-        function drawLineAcross(fromX, fromY, toX, toY) {
-            draw.line(fromX, fromY, toX, toY, randomColor(), 7, shape);
-        }
-        function drawLineDown(fromX, fromY, toX, toY) {
-            draw.line(fromX, fromY, toX, toY, randomColor(), 7, shape);
-        }
-        function drawLineBack(fromX, fromY, toX, toY) {
-            draw.line(fromX, fromY, toX, toY, randomColor(), 7, shape);
-        }
-        function drawLineUp(fromX, fromY, toX, toY) {
+        function drawLine(fromX, fromY, toX, toY) {
             draw.line(fromX, fromY, toX, toY, randomColor(), 7, shape);
         }
         function clear() {
